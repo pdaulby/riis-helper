@@ -26,11 +26,16 @@ transform: scale(-1, -1);
 }
 
 .text-box {
+  height: 20%;
+}
+
+.social-box {
   height: 10%;
+  background-color: yellow;
 }
 
 .art-box {
-  height: 80%;
+  height: 40%;
 }
 
 .App {
