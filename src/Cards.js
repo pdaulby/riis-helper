@@ -103,7 +103,7 @@ export const Cards = () => [
     },
     { 
         action : "Using the Environment",
-        social : "Duty, Obidence",
+        social : "Duty, Obidience",
         reversed: {
           action: "Environmental Hazard",
           social : "Corruption",

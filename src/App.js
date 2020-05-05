@@ -13,7 +13,7 @@ function App() {
         {
           num > 2 
           ? <button onClick={() => {setNum(num-1)}}>Next Card</button>
-          : <button onClick={() => {cards = shuffle(cards); setNum(cards.length-1)}}>Shuffle</button>
+          : <button onClick={() => {cards = shuffle(cards); setNum(cards.length-1)}}>Shuffle then Draw</button>
         }
       </header>
     </div>
@@ -27,7 +27,7 @@ function Card(props) {
       <div className="text-box backwards">{props.card.reversed.action}</div>
       <div className={props.card.reversed.social != null ? "social-box backwards" : "text-box backwards"}>{props.card.reversed.social}</div>
       <div className ="art-box"/>
-      <div className={props.card.reversed.social != null ? "social-box backwards" : "text-box backwards"}>{props.card.social}</div>
+      <div className={props.card.social != null ? "social-box" : "text-box"}>{props.card.social}</div>
       <div className="text-box">{props.card.action}</div>
     </div>
   </div>);
