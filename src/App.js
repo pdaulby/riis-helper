@@ -3,17 +3,18 @@ import './App.css';
 import Cards from './Cards.js'
 
 function App() {
-  let cards = Cards();
-  cards = shuffle(cards);
+  const [cards, setCards] = useState(shuffle(Cards()));
   const [num, setNum] = useState(cards.length - 1);
+  let flip = random_boolean();
+  let card = flip ? cards[num] : reverseCard(cards[num]);
   return (
     <div className="App">
       <header className="App-header">
-        <Card card={random_boolean() ? cards[num] : reverseCard(cards[num])}></Card>
+        <Card card={card}></Card>
         {
           num > 2 
           ? <button onClick={() => {setNum(num-1)}}>Next Card</button>
-          : <button onClick={() => {cards = shuffle(cards); setNum(cards.length-1)}}>Shuffle then Draw</button>
+          : <button onClick={() => { setCards(shuffle(cards)); setNum(cards.length-1)}}>Shuffle then Draw</button>
         }
       </header>
     </div>

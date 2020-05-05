@@ -78,7 +78,7 @@ export const Cards = () => [
         }
     },
     { 
-        action : "Hope in Bleaknesss",
+        action : "Hope in Bleakness",
         reversed: {
           action: "Smart Idea turn Foolish"
         }
