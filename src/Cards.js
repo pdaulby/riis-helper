@@ -102,6 +102,24 @@ export const Cards = () => [
         }
     },
     { 
+        action : "Control",
+        reversed: {
+          action: "Inexperience"
+        }
+    },
+    { 
+        action : "Discoveries",
+        reversed: {
+          action: "Mistakes"
+        }
+    },
+    { 
+        action : "Purpose",
+        reversed: {
+          action: "Constraints"
+        }
+    },
+    { 
         action : "Using the Environment",
         social : "Duty, Obidience",
         reversed: {
@@ -115,6 +133,54 @@ export const Cards = () => [
         reversed: {
           action: "Outmanouvered",
           social : "Tyranny",
+        }
+    },
+    { 
+        action : "Unrelenting Activity",
+        social : "Purity",
+        reversed: {
+          action: "Out of Time ",
+          social : "Temptation",
+        }
+    },
+    { 
+        action : "Recovery",
+        social : "Deception Revealed *",
+        reversed: {
+          action: "Destruction",
+          social : "Deceit",
+        }
+    },
+    { 
+        action : "Simple Strength",
+        social : "Wisdom",
+        reversed: {
+          action: "Weakness",
+          social : "Isolation",
+        }
+    },
+    { 
+        action : "Resilience",
+        social : "Growth",
+        reversed: {
+          action: "Clumsiness",
+          social : "Lack of Vision",
+        }
+    },
+    { 
+        action : "Awareness",
+        social : "Solidarity",
+        reversed: {
+          action: "Outsmarted",
+          social : "Lacking Judgement",
+        }
+    },
+    { 
+        action : "Overpowering",
+        social : "Indulgence",
+        reversed: {
+          action: "Advantage turns to Disadvantage",
+          social : "Shallowness",
         }
     },
 ]
