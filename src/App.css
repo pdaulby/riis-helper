@@ -3,7 +3,8 @@
   height: 440px;
   width: 315px;
   font-size: 30px;
-  margin: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   padding-top: 15px;
   padding-left: 15px;
   padding-bottom: 15px;
@@ -22,9 +23,19 @@
   padding-right: 9px;
 }
 
-.corner-pic {
-  float: left;
+.buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+.advantage-button {
+  margin-top: 15px;
+}
+
+.top-cards {
   
+  display: flex;
 }
 
 .card-inner {
