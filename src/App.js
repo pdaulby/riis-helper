@@ -1,123 +1,58 @@
-import React, { useState } from 'react';
-import './App.css';
-import Cards from './Cards.js'
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import DrawHelper from "./DrawHelper";
+import Cards from "./Cards";
+import Card from "./Card";
 
-const DrawType = {
-  MAJOR_DISADVANTAGE: "Major Disadvantage",
-  DISADVANTAGE: "Disadvantage",
-  NORMAL: "Normal",
-  ADVANTAGE: "Advantage",
-  MAJOR_ADVANTAGE: "Major Advantage",
-}
-
-function App() {
-  const [cards, setCards] = useState(shuffle(Cards()));
-  const [num, setNum] = useState(cards.length);
-  const [drawType, setDrawType] = useState(DrawType.NORMAL);
-  const [showPrevious, setShowPrevious] = useState(0);
-  let flip = random_boolean();
-  let getCard = () => flip ? cards[num] : reverseCard(cards[num]);
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        {num === cards.length ? <div />
-          : drawType === DrawType.NORMAL
-            ? <Card card={getCard()} />
-            : <MultiCard cards={cards} num={num} drawType={drawType} showPrevious={showPrevious}></MultiCard>}
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/cards">Card List</Link>
+            </li>
+          </ul>
+        </nav>
 
-        {num < 2
-          ? <button onClick={() => { setCards(shuffle(cards)); setNum(cards.length); setShowPrevious(0); }}>Shuffle</button>
-          : <div className="buttons">
-            <button onClick={() => { setNum(num - 1); setShowPrevious(0); setDrawType(DrawType.NORMAL); }}>Draw a Card</button>
-            <AdvantageButton drawType={DrawType.ADVANTAGE} num={num} setNum={setNum} setShowPrevious={setShowPrevious} setDrawType={setDrawType} />
-            <AdvantageButton drawType={DrawType.MAJOR_ADVANTAGE} num={num} setNum={setNum} setShowPrevious={setShowPrevious} setDrawType={setDrawType} />
-            <AdvantageButton drawType={DrawType.DISADVANTAGE} num={num} setNum={setNum} setShowPrevious={setShowPrevious} setDrawType={setDrawType} />
-            <AdvantageButton drawType={DrawType.MAJOR_DISADVANTAGE} num={num} setNum={setNum} setShowPrevious={setShowPrevious} setDrawType={setDrawType} />
-          </div>
-        }
-      </header>
-    </div>
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/cards">
+            <CardList />
+          </Route>
+          <Route path="/">
+            <DrawHelper />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-function AdvantageButton(props) {
+function About() {
+  return <h2>About</h2>;
+}
+
+function CardList() {
   return (
-    <button className="advantage-button" onClick={() => {
-      props.setDrawType(props.drawType)
-      if (random_boolean()) {
-        if ((props.drawType === DrawType.MAJOR_ADVANTAGE || props.drawType === DrawType.MAJOR_DISADVANTAGE) && random_boolean()) {
-          props.setNum(props.num - 3); props.setShowPrevious(2);
-        }
-        else { props.setNum(props.num - 2); props.setShowPrevious(1); }
-      }
-      else {
-        props.setNum(props.num - 1); props.setShowPrevious(0);
-      }
-    }}>Draw with {props.drawType}</button>
-  )
+  <div className="App card-list">
+    {Cards().map((item) => 
+    <Card card={item}/>)}
+  </div>);
 }
-
-function Card(props) {
-  return (
-    <div className={props.small ? "card-border-small" : "card-border-large"}>
-      <div className="card-inner">
-        <div className="text-box backwards">{props.card.reversed.action}</div>
-        <div className={props.card.reversed.social != null ? "social-box backwards" : "text-box"}>{props.card.reversed.social}</div>
-        <div className="art-box" />
-        <div className={props.card.social != null ? "social-box" : "text-box"}>{props.card.social}</div>
-        <div className="text-box">{props.card.action}</div>
-      </div>
-    </div>);
-}
-
-function MultiCard(props) {
-  let major = props.drawType === DrawType.MAJOR_ADVANTAGE || props.drawType === DrawType.MAJOR_DISADVANTAGE;
-  let showChooseText = props.showPrevious === 0 || (major && props.showPrevious === 1);
-  let bestWorst = (props.drawType === DrawType.ADVANTAGE || props.drawType === DrawType.MAJOR_ADVANTAGE) ? "best" : "worst";
-  return (
-    <div>
-      <div className="top-cards">
-        {props.showPrevious === 2 ? <Card card={props.cards[props.num + 2]} small={true} /> : <div />}
-        {props.showPrevious > 0 ? <Card card={props.cards[props.num + 1]} small={true} /> : <div />}
-      </div>
-      <div className="show-reverse">
-        <Card card={props.cards[props.num]} />
-        {showChooseText ? <div> <Card card={reverseCard(props.cards[props.num])} small={true} /><div>Choose the {bestWorst} of the options from the card</div></div> : <div />}
-      </div>
-    </div>
-  );
-}
-
-const reverseCard = (card) => {
-  return {
-    action: card.reversed.action,
-    social: card.reversed.social,
-    reversed: {
-      action: card.action,
-      social: card.social
-    }
-  }
-}
-
-const random_boolean = () => Math.random() >= 0.5;
-
-function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
-}
-
-export default App;

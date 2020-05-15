@@ -5,6 +5,7 @@
   font-size: 30px;
   margin-top: 25px;
   margin-bottom: 25px;
+  margin-left: 2px;
   padding-top: 15px;
   padding-left: 15px;
   padding-bottom: 15px;
@@ -27,6 +28,11 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantage-button {
