@@ -26,7 +26,7 @@ function Board(props) {
           <Library deck={itemDeck} addToHand={addToHand} />
           <Library deck={locationDeck} addToHand={addToHand} />
           <Library deck={weaponDeck} addToHand={addToHand} />
-          <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100))} >Roll D100</button> <p/>{randomNumber}</div>
+          <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100)+1)} >Roll D100</button> <p/>{randomNumber}</div>
         </div>
         hand
         <div className="rows hand border">
