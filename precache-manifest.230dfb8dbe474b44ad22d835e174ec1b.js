@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9c4f6fb28a02c4b8b49bcf2a45c9c688",
+    "revision": "3fc57d9079bd722d81120eae7f7556c5",
     "url": "/riis-helper/index.html"
   },
   {
-    "revision": "4b11feb852bba99dec5b",
+    "revision": "8ae44eac1ff02950421a",
     "url": "/riis-helper/static/css/main.1916127f.chunk.css"
   },
   {
-    "revision": "fbddf3c1ee669e728e56",
-    "url": "/riis-helper/static/js/2.5dbf3142.chunk.js"
+    "revision": "56ba12c482ea2f542854",
+    "url": "/riis-helper/static/js/2.144aac80.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/riis-helper/static/js/2.5dbf3142.chunk.js.LICENSE.txt"
+    "url": "/riis-helper/static/js/2.144aac80.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4b11feb852bba99dec5b",
-    "url": "/riis-helper/static/js/main.d0d90788.chunk.js"
+    "revision": "8ae44eac1ff02950421a",
+    "url": "/riis-helper/static/js/main.0b9ad8c2.chunk.js"
   },
   {
     "revision": "f84fbbc72bab6fd36ab8",
