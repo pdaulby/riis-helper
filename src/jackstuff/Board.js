@@ -6,6 +6,7 @@ function Board(props) {
   let [hand, setHand] = useState([]);
   let addToHand = (item) => item && setHand(hand.concat(item));
   let removeFromHand = (value) => setHand(hand.filter(item => item !== value));
+  let [randomNumber, setRandomNumber] = useState(100);
 
   let [enemyDeck,] = useState(new Deck("Enemy Deck", "./Enemy/enemy_", 61));
   let [costOfWarDeck,] = useState(new Deck("Cost of War Deck", "./CostOfWar/costofwar_", 61));
@@ -25,6 +26,7 @@ function Board(props) {
           <Library deck={itemDeck} addToHand={addToHand} />
           <Library deck={locationDeck} addToHand={addToHand} />
           <Library deck={weaponDeck} addToHand={addToHand} />
+          <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100))} >Roll D100</button> <p/>{randomNumber}</div>
         </div>
         hand
         <div className="rows hand border">
