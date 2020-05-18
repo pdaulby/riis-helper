@@ -1,14 +1,14 @@
 import { shuffle } from '../shuffle';
 
 class Deck {
-    constructor(name, initialCards){
+    constructor(deckName, initialCards){
         this.cards = initialCards;
-        this.name = name;
-        shuffleDeck();
+        this.name = deckName;
+        this.shuffleDeck();
         this.current = this.cards.length
     }
 
-    get name() {
+    getName() {
         return this.name;
     }
 
@@ -26,3 +26,5 @@ class Deck {
         this.current = this.cards.length;
     }
 }
+
+export default Deck;

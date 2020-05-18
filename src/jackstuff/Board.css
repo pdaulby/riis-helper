@@ -1,0 +1,28 @@
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.rows {
+  display: flex;
+  flex-direction: row;
+}
+
+.board {
+  font-size: medium;
+}
+
+.deck {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 176px;
+  width: 126px;
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 176px;
+  width: 126px;
+}

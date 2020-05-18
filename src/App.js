@@ -8,6 +8,7 @@ import {
 import DrawHelper from "./DrawHelper";
 import Cards from "./Cards";
 import Card from "./Card";
+import Board from "./jackstuff/Board";
 
 export default function App() {
   return (
@@ -35,6 +36,12 @@ export default function App() {
           </Route>
           <Route path="/cards">
             <CardList />
+          </Route>
+          <Route path="/riis-helper">
+            <DrawHelper />
+          </Route>
+          <Route path="/jackstuff">
+            <Board />
           </Route>
           <Route path="/">
             <DrawHelper />
