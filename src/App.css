@@ -19,11 +19,11 @@
 }
 
 .card-border {
-  margin-top: 5%;
+  padding-top: 5%;
   margin-left: 4%;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
   margin-right: 4%;
-  height: 90%;
+  height: 92%;
 }
 
 .buttons {
@@ -42,6 +42,10 @@
 }
 
 .top-cards {
+  display: flex;
+}
+
+.show-reverse {
   display: flex;
 }
 
@@ -101,4 +105,13 @@ transform: scale(-1, -1);
   top: 0px;
   right: 0px;
   height: 10%;
+}
+
+.flip-cornered {
+  z-index: 3;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 10%;
+  transform: rotate(180deg) scaleX(-1);
 }

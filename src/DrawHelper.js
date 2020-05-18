@@ -23,8 +23,8 @@ function DrawHelper() {
       <header className="App-header">
         {num === cards.length ? <div />
           : drawType === DrawType.NORMAL
-            ? <Card card={getCard()} />
-            : <MultiCard cards={cards} num={num} drawType={drawType} showPrevious={showPrevious}></MultiCard>}
+            ? <Card flip={flip} card={getCard()} />
+            : <MultiCard flip={flip} cards={cards} num={num} drawType={drawType} showPrevious={showPrevious}></MultiCard>}
 
         {num < 2
           ? <button onClick={() => { setCards(shuffle(cards)); setNum(cards.length); setShowPrevious(0); }}>Shuffle</button>
@@ -65,13 +65,15 @@ function MultiCard(props) {
   return (
     <div>
       <div className="top-cards">
-        {props.showPrevious === 2 ? <Card card={props.cards[props.num + 2]} small={true} /> : <div />}
-        {props.showPrevious > 0 ? <Card card={props.cards[props.num + 1]} small={true} /> : <div />}
+        {props.showPrevious > 0 && <div>discarded cards</div>}
+        {props.showPrevious === 2 && <Card card={props.cards[props.num + 2]} small={true} />}
+        {props.showPrevious > 0 && <Card card={props.cards[props.num + 1]} small={true} />}
       </div>
       <div className="show-reverse">
-        <Card card={props.cards[props.num]} />
-        {showChooseText ? <div> <Card card={reverseCard(props.cards[props.num])} small={true} /><div>Choose the {bestWorst} of the options from the card</div></div> : <div />}
+        <Card flip={props.flip} card={props.cards[props.num]} />
+        {showChooseText && <Card flip={!props.flip} card={reverseCard(props.cards[props.num])}/>}
       </div>
+        {showChooseText && <div>Choose the {bestWorst} of the options from the card</div>}
     </div>
   );
 }

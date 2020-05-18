@@ -5,7 +5,7 @@ import redraw from './card-draw.svg';
 function Card(props) {
     return (
       <div className={props.small ? "card-small" : "card-large"}>
-      <img src={redraw} className="cornered"/>
+      {!props.flip && <img src={redraw} className="cornered" alt="draw card if advantage/disadvantage"/>}
       <div className={"card-border"}>
         <div className="card-inner">
           <div className="text-box backwards">{props.card.reversed.action}</div>
@@ -15,6 +15,7 @@ function Card(props) {
           <div className="text-box">{props.card.action}</div>
         </div>
       </div>
+      {props.flip && <img src={redraw} className="flip-cornered" alt="draw card if advantage/disadvantage"/>}
       </div>);
   }
 
