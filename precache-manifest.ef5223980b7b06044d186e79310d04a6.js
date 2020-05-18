@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "966122c722fe86cdea603bac5598d0a4",
+    "revision": "80ffc85302814966ced5d7cd3481548c",
     "url": "/riis-helper/index.html"
   },
   {
-    "revision": "958c01490d740c9c5b75",
-    "url": "/riis-helper/static/css/main.743f1f6b.chunk.css"
+    "revision": "955d033a7af1424ba21f",
+    "url": "/riis-helper/static/css/main.ba6bf31d.chunk.css"
   },
   {
-    "revision": "6b5f456811ddacf9504d",
-    "url": "/riis-helper/static/js/2.207da102.chunk.js"
+    "revision": "3a8fc7bbc0252dbe4d51",
+    "url": "/riis-helper/static/js/2.fff503d6.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/riis-helper/static/js/2.207da102.chunk.js.LICENSE.txt"
+    "url": "/riis-helper/static/js/2.fff503d6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "958c01490d740c9c5b75",
-    "url": "/riis-helper/static/js/main.a0297447.chunk.js"
+    "revision": "955d033a7af1424ba21f",
+    "url": "/riis-helper/static/js/main.fb8f0775.chunk.js"
   },
   {
     "revision": "f84fbbc72bab6fd36ab8",
