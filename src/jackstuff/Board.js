@@ -4,36 +4,43 @@ import Deck from './Deck';
 
 function Board(props) {
   let [hand, setHand] = useState([]);
-  let [deck, ] = useState(new Deck("Enemy Deck", "./Enemy/enemy_", 61))
+  let [enemyDeck,] = useState(new Deck("Enemy Deck", "./Enemy/enemy_", 61))
+  let [armourDeck,] = useState(new Deck("Armour Deck", "./Armour/Armourjpg_", 120))
   let addToHand = (item) => item && setHand(hand.concat(item));
+  let removeFromHand = (value) => setHand(hand.filter(item => item !== value));
   return (
     <div className="rows table">
       <div className="columns">
         decks
         <div className="rows decks border">
-          <Library deck={deck} addToHand={addToHand}/>
+          <Library deck={enemyDeck} addToHand={addToHand} />
+          <Library deck={armourDeck} addToHand={addToHand} />
         </div>
-        <div className="rows board border">
-          board
-        </div>
-      </div>
-      <div className="rows hand border">
         hand
-        <Hand hand={hand} />
+        <div className="rows hand border">
+          <Hand hand={hand} removeFromHand={removeFromHand} />
+        </div>
+          board
+        <div className="rows board border">
+        </div>
       </div>
     </div>);
 }
 
-function Library({addToHand, deck}) {
-  return (<div className="card border"
-    onClick={() => {addToHand(deck.getPath() + deck.draw() + ".jpg")}} 
->{deck.getName()}. <p/> Cards Remaining: {deck.cardsRemaining()}</div>);
+function Library({ addToHand, deck }) {
+  return (<div className="deck border"
+    onClick={() => { addToHand(deck.getPath() + deck.draw() + ".jpg") }}
+  ><p />{deck.getName()}.<p /> Cards Remaining: {deck.cardsRemaining()}</div>);
 }
 
-function Hand({hand}) {
+function Hand({ hand, removeFromHand }) {
   return (<>
-    {hand.map(location => (<img className="card" src={require(`${location}`)} />))}
+    {hand.map(location => (<img className="card" src={require(`${location}`)} onClick={() => removeFromHand(location)} />))}
   </>)
+}
+
+function Card({ location }) {
+  return (<img className="card" src={require(`${location}`)} />);
 }
 
 

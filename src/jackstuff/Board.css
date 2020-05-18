@@ -21,4 +21,13 @@
 .card {
   height: 352px;
   width: 252px;
+  font-size: x-large;
+  text-align: center;
+}
+
+.deck {
+  height: 352px;
+  width: 252px;
+  font-size: x-large;
+  text-align: center;
 }
