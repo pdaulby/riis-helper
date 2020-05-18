@@ -20,7 +20,7 @@ export default function App() {
               <Link to="/riis-helper">Home</Link>
             </li>
             <li>
-              <Link to="/jackstuff">About</Link>
+              <Link to="/jackstuff">jackstuff</Link>
             </li>
             <li>
               <Link to="/cards">Card List</Link>
