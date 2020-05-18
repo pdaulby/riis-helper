@@ -20,7 +20,7 @@ export default function App() {
               <Link to="/riis-helper">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/jackstuff">About</Link>
             </li>
             <li>
               <Link to="/cards">Card List</Link>
@@ -42,6 +42,9 @@ export default function App() {
           </Route>
           <Route path="/jackstuff">
             <Board />
+          </Route>
+          <Route path="/">
+            <DrawHelper />
           </Route>
         </Switch>
       </div>
