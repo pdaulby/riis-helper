@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/riis-helper/static/css/main.4734d6be.chunk.css",
+    "main.css": "/riis-helper/static/css/main.24fd7439.chunk.css",
     "main.js": "/riis-helper/static/js/main.46339607.chunk.js",
     "main.js.map": "/riis-helper/static/js/main.46339607.chunk.js.map",
     "runtime-main.js": "/riis-helper/static/js/runtime-main.961484b3.js",
@@ -8,16 +8,16 @@
     "static/js/2.9ddebab5.chunk.js": "/riis-helper/static/js/2.9ddebab5.chunk.js",
     "static/js/2.9ddebab5.chunk.js.map": "/riis-helper/static/js/2.9ddebab5.chunk.js.map",
     "index.html": "/riis-helper/index.html",
-    "precache-manifest.8eae1d6a69e6dfe32bc4103e4286b699.js": "/riis-helper/precache-manifest.8eae1d6a69e6dfe32bc4103e4286b699.js",
+    "precache-manifest.fffda747deffbee5674f21b0cc553037.js": "/riis-helper/precache-manifest.fffda747deffbee5674f21b0cc553037.js",
     "service-worker.js": "/riis-helper/service-worker.js",
-    "static/css/main.4734d6be.chunk.css.map": "/riis-helper/static/css/main.4734d6be.chunk.css.map",
+    "static/css/main.24fd7439.chunk.css.map": "/riis-helper/static/css/main.24fd7439.chunk.css.map",
     "static/js/2.9ddebab5.chunk.js.LICENSE.txt": "/riis-helper/static/js/2.9ddebab5.chunk.js.LICENSE.txt",
     "static/media/card-draw.svg": "/riis-helper/static/media/card-draw.b2706e46.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.961484b3.js",
     "static/js/2.9ddebab5.chunk.js",
-    "static/css/main.4734d6be.chunk.css",
+    "static/css/main.24fd7439.chunk.css",
     "static/js/main.46339607.chunk.js"
   ]
 }
