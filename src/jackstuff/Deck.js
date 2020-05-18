@@ -1,8 +1,17 @@
 import { shuffle } from '../shuffle';
 
+const stringNums = (length) => {
+  let digits = length >= 100 ? 3 : length >=10 ? 2 : 1;
+  return Array.from(Array(length + 1).keys()).slice(1).map((num) => {
+    let s = num + "";
+    return s.padStart(digits, '0');
+  })
+}
+
 class Deck {
-    constructor(deckName, initialCards){
-        this.cards = initialCards;
+    constructor(deckName, locationPath, length){
+      this.path = locationPath;
+        this.cards = stringNums(length);
         this.name = deckName;
         this.shuffleDeck();
         this.current = this.cards.length
@@ -10,6 +19,10 @@ class Deck {
 
     getName() {
         return this.name;
+    }
+
+    getPath() {
+      return this.path;
     }
 
     cardsRemaining() {

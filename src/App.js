@@ -43,9 +43,6 @@ export default function App() {
           <Route path="/jackstuff">
             <Board />
           </Route>
-          <Route path="/">
-            <DrawHelper />
-          </Route>
         </Switch>
       </div>
     </Router>

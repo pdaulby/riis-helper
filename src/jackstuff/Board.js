@@ -4,8 +4,8 @@ import Deck from './Deck';
 
 function Board(props) {
   let [hand, setHand] = useState([]);
-  let [deck, ] = useState(new Deck("test", [1,2,3,4]))
-  let addToHand = (item) => setHand(hand.concat(item));
+  let [deck, ] = useState(new Deck("Enemy Deck", "./Enemy/enemy_", 61))
+  let addToHand = (item) => item && setHand(hand.concat(item));
   return (
     <div className="rows table">
       <div className="columns">
@@ -19,19 +19,22 @@ function Board(props) {
       </div>
       <div className="rows hand border">
         hand
-        {hand}
+        <Hand hand={hand} />
       </div>
     </div>);
 }
 
 function Library({addToHand, deck}) {
-  return (<div className="deck border"
-    onClick={() => {addToHand(deck.draw())}} 
->{deck.getName()} {deck.cardsRemaining()}</div>);
+  return (<div className="card border"
+    onClick={() => {addToHand(deck.getPath() + deck.draw() + ".jpg")}} 
+>{deck.getName()}. <p/> Cards Remaining: {deck.cardsRemaining()}</div>);
 }
 
 function Hand({hand}) {
-
+  return (<>
+    {hand.map(location => (<img className="card" src={require(`${location}`)} />))}
+  </>)
 }
+
 
 export default Board;

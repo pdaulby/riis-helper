@@ -18,12 +18,7 @@
   border-radius: 5px;
 }
 
-.deck {
-  height: 176px;
-  width: 126px;
-}
-
 .card {
-  height: 176px;
-  width: 126px;
+  height: 352px;
+  width: 252px;
 }
