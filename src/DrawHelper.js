@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Cards from './Cards.js'
 import Card from './Card.js'
+import { shuffle } from './shuffle';
 
 const DrawType = {
   MAJOR_DISADVANTAGE: "Major Disadvantage",
@@ -90,24 +91,5 @@ const reverseCard = (card) => {
 }
 
 const random_boolean = () => Math.random() >= 0.5;
-
-function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
-}
 
 export default DrawHelper;
