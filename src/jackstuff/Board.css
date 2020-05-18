@@ -9,6 +9,10 @@
   flex-direction: row;
 }
 
+.hand {
+  flex-wrap: wrap;
+}
+
 .board {
   font-size: medium;
 }
