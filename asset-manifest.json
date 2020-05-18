@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/riis-helper/static/css/main.38155447.chunk.css",
+    "main.css": "/riis-helper/static/css/main.1916127f.chunk.css",
     "main.js": "/riis-helper/static/js/main.495d2601.chunk.js",
     "main.js.map": "/riis-helper/static/js/main.495d2601.chunk.js.map",
     "runtime-main.js": "/riis-helper/static/js/runtime-main.961484b3.js",
@@ -8,9 +8,9 @@
     "static/js/2.979af8c1.chunk.js": "/riis-helper/static/js/2.979af8c1.chunk.js",
     "static/js/2.979af8c1.chunk.js.map": "/riis-helper/static/js/2.979af8c1.chunk.js.map",
     "index.html": "/riis-helper/index.html",
-    "precache-manifest.6ebbe782290f369978a5cc781b18acfc.js": "/riis-helper/precache-manifest.6ebbe782290f369978a5cc781b18acfc.js",
+    "precache-manifest.08e2476991f38076aa2c116eee4079a1.js": "/riis-helper/precache-manifest.08e2476991f38076aa2c116eee4079a1.js",
     "service-worker.js": "/riis-helper/service-worker.js",
-    "static/css/main.38155447.chunk.css.map": "/riis-helper/static/css/main.38155447.chunk.css.map",
+    "static/css/main.1916127f.chunk.css.map": "/riis-helper/static/css/main.1916127f.chunk.css.map",
     "static/js/2.979af8c1.chunk.js.LICENSE.txt": "/riis-helper/static/js/2.979af8c1.chunk.js.LICENSE.txt",
     "static/media/Armourjpg_001.jpg": "/riis-helper/static/media/Armourjpg_001.f7c3a2a7.jpg",
     "static/media/Armourjpg_002.jpg": "/riis-helper/static/media/Armourjpg_002.5609bf5a.jpg",
@@ -448,7 +448,7 @@
   "entrypoints": [
     "static/js/runtime-main.961484b3.js",
     "static/js/2.979af8c1.chunk.js",
-    "static/css/main.38155447.chunk.css",
+    "static/css/main.1916127f.chunk.css",
     "static/js/main.495d2601.chunk.js"
   ]
 }
