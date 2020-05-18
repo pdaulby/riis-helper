@@ -65,7 +65,7 @@ function MultiCard(props) {
   return (
     <div>
       <div className="top-cards">
-        {props.showPrevious > 0 && <div>discarded cards</div>}
+        {props.showPrevious > 0 && <div>discarded cards<p/></div>}
         {props.showPrevious === 2 && <Card card={props.cards[props.num + 2]} small={true} />}
         {props.showPrevious > 0 && <Card card={props.cards[props.num + 1]} small={true} />}
       </div>

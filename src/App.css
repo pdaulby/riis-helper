@@ -43,10 +43,14 @@
 
 .top-cards {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .show-reverse {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-inner {
