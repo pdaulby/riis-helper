@@ -99,19 +99,36 @@ transform: scale(-1, -1);
   color: #61dafb;
 }
 
-.cornered {
+.left-img {
   z-index: 3;
   position: absolute;
   top: 0px;
-  right: 0px;
-  height: 10%;
+  left: 0px;
+  height: 7%;
 }
 
-.flip-cornered {
+.left-img-flip {
   z-index: 3;
   position: absolute;
   bottom: 0px;
   left: 0px;
-  height: 10%;
+  height: 7%;
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.right-img {
+  z-index: 3;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 7%;
+}
+
+.right-img-flip {
+  z-index: 3;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 7%;
   transform: rotate(180deg) scaleX(-1);
 }
