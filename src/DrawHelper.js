@@ -42,37 +42,37 @@ function DrawHelper() {
   );
 }
 
-function AdvantageButton(props) {
+function AdvantageButton({setDrawType, drawType, setNum, num, setShowPrevious}) {
   return (
     <button className="advantage-button" onClick={() => {
-      props.setDrawType(props.drawType)
+      setDrawType(drawType)
       if (random_boolean()) {
-        if ((props.drawType === DrawType.MAJOR_ADVANTAGE || props.drawType === DrawType.MAJOR_DISADVANTAGE) && random_boolean()) {
-          props.setNum(props.num - 3); props.setShowPrevious(2);
+        if ((drawType === DrawType.MAJOR_ADVANTAGE || drawType === DrawType.MAJOR_DISADVANTAGE) && random_boolean()) {
+          setNum(num - 3); setShowPrevious(2);
         }
-        else { props.setNum(props.num - 2); props.setShowPrevious(1); }
+        else { setNum(num - 2); setShowPrevious(1); }
       }
       else {
-        props.setNum(props.num - 1); props.setShowPrevious(0);
+        setNum(num - 1); setShowPrevious(0);
       }
-    }}>Draw with {props.drawType}</button>
+    }}>Draw with {drawType}</button>
   )
 }
 
-function MultiCard(props) {
-  let major = props.drawType === DrawType.MAJOR_ADVANTAGE || props.drawType === DrawType.MAJOR_DISADVANTAGE;
-  let showChooseText = props.showPrevious === 0 || (major && props.showPrevious === 1);
-  let bestWorst = (props.drawType === DrawType.ADVANTAGE || props.drawType === DrawType.MAJOR_ADVANTAGE) ? "best" : "worst";
+function MultiCard({drawType, showPrevious, cards, num, flip}) {
+  let major = drawType === DrawType.MAJOR_ADVANTAGE || drawType === DrawType.MAJOR_DISADVANTAGE;
+  let showChooseText = showPrevious === 0 || (major && showPrevious === 1);
+  let bestWorst = (drawType === DrawType.ADVANTAGE || drawType === DrawType.MAJOR_ADVANTAGE) ? "best" : "worst";
   return (
     <div>
       <div className="top-cards">
-        {props.showPrevious > 0 && <div>discarded cards<p/></div>}
-        {props.showPrevious === 2 && <Card card={props.cards[props.num + 2]} small={true} />}
-        {props.showPrevious > 0 && <Card card={props.cards[props.num + 1]} small={true} />}
+        {showPrevious > 0 && <div>discarded cards<p/></div>}
+        {showPrevious === 2 && <Card card={cards[num + 2]} small={true} />}
+        {showPrevious > 0 && <Card card={cards[num + 1]} small={true} />}
       </div>
       <div className="show-reverse">
-        <Card flip={props.flip} card={props.cards[props.num]} />
-        {showChooseText && <Card flip={!props.flip} card={reverseCard(props.cards[props.num])}/>}
+        <Card flip={flip} card={cards[num]} />
+        {showChooseText && <Card flip={!flip} card={reverseCard(cards[num])}/>}
       </div>
         {showChooseText && <div>Choose the {bestWorst} of the options from the card</div>}
     </div>
