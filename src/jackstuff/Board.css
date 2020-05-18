@@ -13,16 +13,17 @@
   font-size: medium;
 }
 
-.deck {
+.border{
   border: 2px solid black;
   border-radius: 5px;
+}
+
+.deck {
   height: 176px;
   width: 126px;
 }
 
 .card {
-  border: 2px solid black;
-  border-radius: 5px;
   height: 176px;
   width: 126px;
 }
