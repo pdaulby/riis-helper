@@ -6,6 +6,10 @@ function Board(props) {
   let [hand, setHand] = useState([]);
   let addToHand = (item) => item && setHand(hand.concat(item));
   let removeFromHand = (value) => setHand(hand.filter(item => item !== value));
+
+  let [board, setBoard] = useState([]);
+  let addToBoard = (item) => item && setBoard(board.concat(item));
+  let removeFromBoard = (value) => setBoard(board.filter(item => item !== value));
   let [randomNumber, setRandomNumber] = useState(100);
 
   let [enemyDeck,] = useState(new Deck("Enemy Deck", "./Enemy/enemy_", 61));
@@ -25,10 +29,11 @@ function Board(props) {
         </div>
         hand
         <div className="rows hand border">
-          <Hand hand={hand} removeFromHand={removeFromHand} />
+          <Zone cards={hand} removeFromZone={removeFromHand} />
         </div>
-          board
+        board
         <div className="rows board border">
+          <Zone cards={board} removeFromZone={removeFromBoard} />
         </div>
       </div>
     </div>);
@@ -46,9 +51,9 @@ function Library({ addToHand, deck }) {
   ><p />{deck.getName()}.<p /> Cards Remaining: {deck.cardsRemaining()}</div>);
 }
 
-function Hand({ hand, removeFromHand }) {
+function Zone({ cards, removeFromZone }) {
   return (<>
-    {hand.map(location => (<img className="card" src={require(`${location}`)} onClick={() => removeFromHand(location)} />))}
+    {cards.map(location => (<img className="card" src={require(`${location}`)} onClick={() => removeFromZone(location)} />))}
   </>)
 }
 
