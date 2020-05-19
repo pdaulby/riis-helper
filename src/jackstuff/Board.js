@@ -12,7 +12,7 @@ function Board(props) {
   let [costOfWarDeck,] = useState(new Deck("Cost of War Deck", "./CostOfWar/costofwar_", 61));
   let [armourDeck,] = useState(new Deck("Armour Deck", "./Armour/Armourjpg_", 120));
   let [itemDeck,] = useState(new Deck("Item Deck", "./Item/item_", 69));
-  let [locationDeck,] = useState(new Deck("Location Deck", "./Location/location_", 69));
+  let [locationDeck,] = useState(new Deck("Location Deck", "./Location/location_", 60));
   let [weaponDeck,] = useState(new Deck("Weapon Deck", "./Weapon/weapon_", 60));
   
   return (
@@ -20,12 +20,7 @@ function Board(props) {
       <div className="columns">
         decks
         <div className="rows decks border">
-          <Library deck={enemyDeck} addToHand={addToHand} />
-          <Library deck={costOfWarDeck} addToHand={addToHand} />
-          <Library deck={armourDeck} addToHand={addToHand} />
-          <Library deck={itemDeck} addToHand={addToHand} />
-          <Library deck={locationDeck} addToHand={addToHand} />
-          <Library deck={weaponDeck} addToHand={addToHand} />
+          <Libraries addToHand={addToHand} decks={[enemyDeck, costOfWarDeck, armourDeck, itemDeck, locationDeck, weaponDeck]} />
           <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100)+1)} >Roll D100</button> <p/>{randomNumber}</div>
         </div>
         hand
@@ -37,6 +32,12 @@ function Board(props) {
         </div>
       </div>
     </div>);
+}
+
+function Libraries({addToHand, decks}) {
+  return (<>
+    {decks.map(deck => <Library deck={deck} addToHand={addToHand} />)}
+  </>)
 }
 
 function Library({ addToHand, deck }) {
