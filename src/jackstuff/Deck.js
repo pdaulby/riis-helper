@@ -34,6 +34,10 @@ class Deck {
         return this.cards[this.current];
     }
 
+    discard(num) {
+        this.current = Math.max(0, this.current - num);
+    }
+
     shuffleDeck() {
         this.cards = shuffle(this.cards);
         this.current = this.cards.length;

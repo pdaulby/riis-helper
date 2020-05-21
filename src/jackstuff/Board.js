@@ -8,6 +8,9 @@ function Board(props) {
   let addToHand = (item) => item && setHand(hand.concat(item));
   let removeFromHand = (value) => setHand(hand.filter(item => item !== value));
 
+  let hack = useState(false);
+  let refresh = () => hack[1](!hack[0]);
+
   let [board, setBoard] = useState([]);
   let addToBoard = (item) => item && setBoard(board.concat(item));
   let removeFromBoard = (value) => setBoard(board.filter(item => item !== value));
@@ -25,7 +28,7 @@ function Board(props) {
       <div className="columns">
         decks
         <div className="rows decks border">
-          <Libraries addToHand={addToBoard} decks={[enemyDeck, costOfWarDeck, armourDeck, itemDeck, locationDeck, weaponDeck]} />
+          <Libraries addToHand={addToBoard} decks={[enemyDeck, costOfWarDeck, armourDeck, itemDeck, locationDeck, weaponDeck]} refresh={refresh} />
           <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100) + 1)} >Roll D100</button> <p />{randomNumber}</div>
         </div>
         hand
@@ -40,16 +43,22 @@ function Board(props) {
     </div>);
 }
 
-function Libraries({ addToHand, decks }) {
+function Libraries({ addToHand, decks, refresh }) {
   return (<>
-    {decks.map(deck => <Library deck={deck} addToHand={addToHand} />)}
+    {decks.map(deck => <Library deck={deck} addToHand={addToHand} refresh={refresh}/>)}
   </>)
 }
 
-function Library({ addToHand, deck }) {
-  return (<div className="deck border"
-    onClick={() => { addToHand(deck.getPath() + deck.draw() + ".jpg") }}
-  ><p />{deck.getName()}.<p /> Cards Remaining: {deck.cardsRemaining()}</div>);
+function Library({ addToHand, deck, refresh }) {
+  let [input, setInput] = useState("1");
+  return (<div className="deck border">
+      <p/>{deck.getName()}.<p/> Cards Remaining: {deck.cardsRemaining()}
+      <p/>
+      <button className="dropdown-button" onClick={() => { addToHand(deck.getPath() + deck.draw() + ".jpg") }}>Draw a card</button>
+      <p/>
+      <input value={input} onChange={event => setInput(event.target.value.replace(/\D/,''))} />
+      <button onClick={() => {deck.discard(Number(input)); refresh()}}>discard {input} cards</button>
+  </div>);
 }
 
 function Zone({ cards, removeFromZone, addToHand, addToBoard }) {
