@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Board.css';
 import Deck from './Deck';
+import DropdownWrapper from "react-dropdown-wrapper";
 
 function Board(props) {
   let [hand, setHand] = useState([]);
@@ -18,14 +19,14 @@ function Board(props) {
   let [itemDeck,] = useState(new Deck("Item Deck", "./Item/item_", 69));
   let [locationDeck,] = useState(new Deck("Location Deck", "./Location/location_", 60));
   let [weaponDeck,] = useState(new Deck("Weapon Deck", "./Weapon/weapon_", 60));
-  
+
   return (
     <div className="rows table">
       <div className="columns">
         decks
         <div className="rows decks border">
           <Libraries addToHand={addToHand} decks={[enemyDeck, costOfWarDeck, armourDeck, itemDeck, locationDeck, weaponDeck]} />
-          <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100)+1)} >Roll D100</button> <p/>{randomNumber}</div>
+          <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100) + 1)} >Roll D100</button> <p />{randomNumber}</div>
         </div>
         hand
         <div className="rows hand border">
@@ -39,7 +40,7 @@ function Board(props) {
     </div>);
 }
 
-function Libraries({addToHand, decks}) {
+function Libraries({ addToHand, decks }) {
   return (<>
     {decks.map(deck => <Library deck={deck} addToHand={addToHand} />)}
   </>)
@@ -53,12 +54,25 @@ function Library({ addToHand, deck }) {
 
 function Zone({ cards, removeFromZone }) {
   return (<>
-    {cards.map(location => (<img className="card" src={require(`${location}`)} onClick={() => removeFromZone(location)} />))}
+    {cards.map(location => (<Card location={location} removeFromZone={removeFromZone} />))}
   </>)
 }
 
-function Card({ location }) {
-  return (<img className="card" src={require(`${location}`)} />);
+function Card({ location, removeFromZone }) {
+  return (
+    <DropdownWrapper>
+      {({ changeStatus, isShow }) => (
+        <div className="card relative">
+          <img className="card"
+           onClick={() => changeStatus(!isShow)} 
+           src={require(`${location}`)} />
+          
+          {isShow && <div className="dropdown">
+          <button className="dropdown-button" onClick={() => removeFromZone(location)}>Discard</button>
+          </div>}
+        </div>
+      )}
+    </DropdownWrapper>);
 }
 
 
