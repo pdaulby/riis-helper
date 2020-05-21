@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/riis-helper/static/css/main.d4043272.chunk.css",
-    "main.js": "/riis-helper/static/js/main.f4f0a189.chunk.js",
-    "main.js.map": "/riis-helper/static/js/main.f4f0a189.chunk.js.map",
+    "main.css": "/riis-helper/static/css/main.2fe6179a.chunk.css",
+    "main.js": "/riis-helper/static/js/main.60064535.chunk.js",
+    "main.js.map": "/riis-helper/static/js/main.60064535.chunk.js.map",
     "runtime-main.js": "/riis-helper/static/js/runtime-main.961484b3.js",
     "runtime-main.js.map": "/riis-helper/static/js/runtime-main.961484b3.js.map",
     "static/js/2.d164cb7c.chunk.js": "/riis-helper/static/js/2.d164cb7c.chunk.js",
     "static/js/2.d164cb7c.chunk.js.map": "/riis-helper/static/js/2.d164cb7c.chunk.js.map",
     "index.html": "/riis-helper/index.html",
-    "precache-manifest.e95610521b3177f72fc908c4a6eafad1.js": "/riis-helper/precache-manifest.e95610521b3177f72fc908c4a6eafad1.js",
+    "precache-manifest.b78c9d9576baa273761fb68febe38f84.js": "/riis-helper/precache-manifest.b78c9d9576baa273761fb68febe38f84.js",
     "service-worker.js": "/riis-helper/service-worker.js",
-    "static/css/main.d4043272.chunk.css.map": "/riis-helper/static/css/main.d4043272.chunk.css.map",
+    "static/css/main.2fe6179a.chunk.css.map": "/riis-helper/static/css/main.2fe6179a.chunk.css.map",
     "static/js/2.d164cb7c.chunk.js.LICENSE.txt": "/riis-helper/static/js/2.d164cb7c.chunk.js.LICENSE.txt",
     "static/media/Armourjpg_001.jpg": "/riis-helper/static/media/Armourjpg_001.f7c3a2a7.jpg",
     "static/media/Armourjpg_002.jpg": "/riis-helper/static/media/Armourjpg_002.5609bf5a.jpg",
@@ -448,7 +448,7 @@
   "entrypoints": [
     "static/js/runtime-main.961484b3.js",
     "static/js/2.d164cb7c.chunk.js",
-    "static/css/main.d4043272.chunk.css",
-    "static/js/main.f4f0a189.chunk.js"
+    "static/css/main.2fe6179a.chunk.css",
+    "static/js/main.60064535.chunk.js"
   ]
 }
