@@ -14,7 +14,7 @@
 }
 
 .board {
-  font-size: medium;
+  flex-wrap: wrap;
 }
 
 .border{
@@ -27,6 +27,7 @@
   width: 252px;
   font-size: x-large;
   text-align: center;
+  align-items: center;
 }
 
 .deck {
@@ -40,19 +41,20 @@
   z-index: 3;
   position: absolute;
   top: 20%;
-  left: 50%;
+  align-items: center;
 }
 
 .dropdown-button {
-  margin-left: -100%;
   font-size: x-large;
   font-weight: bold;
+  width: fit-content;
+  margin-bottom: 10px;
 
   
-  background-color: #f44336;; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  background-color: #bdb1b1; /* Green */
+  border: 2px solid black; 
+  color: black;
+  padding: 15px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

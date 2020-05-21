@@ -25,16 +25,16 @@ function Board(props) {
       <div className="columns">
         decks
         <div className="rows decks border">
-          <Libraries addToHand={addToHand} decks={[enemyDeck, costOfWarDeck, armourDeck, itemDeck, locationDeck, weaponDeck]} />
+          <Libraries addToHand={addToBoard} decks={[enemyDeck, costOfWarDeck, armourDeck, itemDeck, locationDeck, weaponDeck]} />
           <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100) + 1)} >Roll D100</button> <p />{randomNumber}</div>
         </div>
         hand
         <div className="rows hand border">
-          <Zone cards={hand} removeFromZone={removeFromHand} />
+          <Zone cards={hand} removeFromZone={removeFromHand} addToBoard={addToBoard} />
         </div>
         board
         <div className="rows board border">
-          <Zone cards={board} removeFromZone={removeFromBoard} />
+          <Zone cards={board} removeFromZone={removeFromBoard} addToHand={addToHand} />
         </div>
       </div>
     </div>);
@@ -52,23 +52,27 @@ function Library({ addToHand, deck }) {
   ><p />{deck.getName()}.<p /> Cards Remaining: {deck.cardsRemaining()}</div>);
 }
 
-function Zone({ cards, removeFromZone }) {
+function Zone({ cards, removeFromZone, addToHand, addToBoard }) {
   return (<>
-    {cards.map(location => (<Card location={location} removeFromZone={removeFromZone} />))}
+    {cards.map(location => (<Card location={location} removeFromZone={removeFromZone} addToHand={addToHand} addToBoard={addToBoard} />))}
   </>)
 }
 
-function Card({ location, removeFromZone }) {
+function Card({ location, removeFromZone, addToHand, addToBoard }) {
   return (
     <DropdownWrapper>
       {({ changeStatus, isShow }) => (
-        <div className="card relative">
-          <img className="card"
+        <div className="card relative columns">
+          <img className="card" alt=""
            onClick={() => changeStatus(!isShow)} 
            src={require(`${location}`)} />
           
-          {isShow && <div className="dropdown">
-          <button className="dropdown-button" onClick={() => removeFromZone(location)}>Discard</button>
+          {isShow && <div className="dropdown columns">
+            <button className="dropdown-button" onClick={() => removeFromZone(location)}>Discard</button>
+            {addToHand && <button className="dropdown-button" 
+              onClick={() => {addToHand(location); removeFromZone(location);}}>Move To Hand</button>}
+            {addToBoard && <button className="dropdown-button" 
+              onClick={() => {addToBoard(location); removeFromZone(location);}}>Move To Board</button>}
           </div>}
         </div>
       )}
