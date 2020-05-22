@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/riis-helper/static/css/main.2fe6179a.chunk.css",
-    "main.js": "/riis-helper/static/js/main.1a68495b.chunk.js",
-    "main.js.map": "/riis-helper/static/js/main.1a68495b.chunk.js.map",
+    "main.js": "/riis-helper/static/js/main.cb042498.chunk.js",
+    "main.js.map": "/riis-helper/static/js/main.cb042498.chunk.js.map",
     "runtime-main.js": "/riis-helper/static/js/runtime-main.961484b3.js",
     "runtime-main.js.map": "/riis-helper/static/js/runtime-main.961484b3.js.map",
     "static/js/2.d164cb7c.chunk.js": "/riis-helper/static/js/2.d164cb7c.chunk.js",
     "static/js/2.d164cb7c.chunk.js.map": "/riis-helper/static/js/2.d164cb7c.chunk.js.map",
     "index.html": "/riis-helper/index.html",
-    "precache-manifest.6f7cb50fc31991be2c85cdba76d28c5d.js": "/riis-helper/precache-manifest.6f7cb50fc31991be2c85cdba76d28c5d.js",
+    "precache-manifest.6b86c99a46b4c16aee0c19927610d558.js": "/riis-helper/precache-manifest.6b86c99a46b4c16aee0c19927610d558.js",
     "service-worker.js": "/riis-helper/service-worker.js",
     "static/css/main.2fe6179a.chunk.css.map": "/riis-helper/static/css/main.2fe6179a.chunk.css.map",
     "static/js/2.d164cb7c.chunk.js.LICENSE.txt": "/riis-helper/static/js/2.d164cb7c.chunk.js.LICENSE.txt",
@@ -449,6 +449,6 @@
     "static/js/runtime-main.961484b3.js",
     "static/js/2.d164cb7c.chunk.js",
     "static/css/main.2fe6179a.chunk.css",
-    "static/js/main.1a68495b.chunk.js"
+    "static/js/main.cb042498.chunk.js"
   ]
 }
