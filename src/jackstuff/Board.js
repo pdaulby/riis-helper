@@ -28,7 +28,12 @@ function Board(props) {
       <div className="columns">
         decks
         <div className="rows decks border">
-          <Libraries addToHand={addToBoard} decks={[enemyDeck, costOfWarDeck, armourDeck, itemDeck, locationDeck, weaponDeck]} refresh={refresh} />
+          <Library deck={enemyDeck} discard={true} addToBoard={addToBoard} refresh={refresh}/>
+          <Library deck={costOfWarDeck} addToBoard={addToBoard} refresh={refresh}/>
+          <Library deck={armourDeck} addToBoard={addToBoard} refresh={refresh}/>
+          <Library deck={itemDeck} addToBoard={addToBoard} refresh={refresh}/>
+          <Library deck={locationDeck} addToBoard={addToBoard} refresh={refresh}/>
+          <Library deck={weaponDeck} addToBoard={addToBoard} refresh={refresh}/>
           <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100) + 1)} >Roll D100</button> <p />{randomNumber}</div>
         </div>
         board
@@ -43,21 +48,15 @@ function Board(props) {
     </div>);
 }
 
-function Libraries({ addToHand, decks, refresh }) {
-  return (<>
-    {decks.map(deck => <Library deck={deck} addToHand={addToHand} refresh={refresh}/>)}
-  </>)
-}
-
-function Library({ addToHand, deck, refresh }) {
+function Library({ addToBoard, deck, refresh, discard }) {
   let [input, setInput] = useState("1");
   return (<div className="deck border">
       <p/>{deck.getName()}.<p/> Cards Remaining: {deck.cardsRemaining()}
       <p/>
-      <button className="dropdown-button" onClick={() => { addToHand(deck.getPath() + deck.draw() + ".jpg") }}>Draw a card</button>
-      <p/>
+      <button className="dropdown-button" onClick={() => { addToBoard(deck.getPath() + deck.draw() + ".jpg") }}>Draw a card</button>
+      {discard && <><p/>
       <input value={input} onChange={event => setInput(event.target.value.replace(/\D/,''))} />
-      <button onClick={() => {deck.discard(Number(input)); refresh()}}>discard {input} cards</button>
+      <button onClick={() => {deck.discard(Number(input)); refresh()}}>discard {input} cards</button></>}
   </div>);
 }
 
