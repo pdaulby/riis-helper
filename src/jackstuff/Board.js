@@ -31,13 +31,13 @@ function Board(props) {
           <Libraries addToHand={addToBoard} decks={[enemyDeck, costOfWarDeck, armourDeck, itemDeck, locationDeck, weaponDeck]} refresh={refresh} />
           <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100) + 1)} >Roll D100</button> <p />{randomNumber}</div>
         </div>
-        hand
-        <div className="rows hand border">
-          <Zone cards={hand} removeFromZone={removeFromHand} addToBoard={addToBoard} />
-        </div>
         board
         <div className="rows board border">
           <Zone cards={board} removeFromZone={removeFromBoard} addToHand={addToHand} />
+        </div>
+        hand
+        <div className="rows hand border">
+          <Zone cards={hand} removeFromZone={removeFromHand} addToBoard={addToBoard} />
         </div>
       </div>
     </div>);
