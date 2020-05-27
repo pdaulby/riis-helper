@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1e62f943b1e377446bfc07b5407388ff",
+    "revision": "083f809d4a21319595b1bb0f560c9632",
     "url": "/riis-helper/index.html"
   },
   {
-    "revision": "677fd47155a8f52396d4",
+    "revision": "1a51904f0ecd5d63601f",
     "url": "/riis-helper/static/css/main.2fe6179a.chunk.css"
   },
   {
-    "revision": "e00bb299dcdd339a2a4f",
-    "url": "/riis-helper/static/js/2.d164cb7c.chunk.js"
+    "revision": "d23725ac259fefc92c41",
+    "url": "/riis-helper/static/js/2.29af7f4c.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/riis-helper/static/js/2.d164cb7c.chunk.js.LICENSE.txt"
+    "url": "/riis-helper/static/js/2.29af7f4c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "677fd47155a8f52396d4",
-    "url": "/riis-helper/static/js/main.cb042498.chunk.js"
+    "revision": "1a51904f0ecd5d63601f",
+    "url": "/riis-helper/static/js/main.023d727e.chunk.js"
   },
   {
     "revision": "f84fbbc72bab6fd36ab8",
@@ -502,6 +502,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0cbe7b56db028e705a5817c733e8fc64",
     "url": "/riis-helper/static/media/Armourjpg_120.0cbe7b56.jpg"
+  },
+  {
+    "revision": "bd248963c0d6715f57b4f60b83ba3d8f",
+    "url": "/riis-helper/static/media/body_armour.bd248963.jpg"
   },
   {
     "revision": "b2706e46959fc289f7a96a124d4efd85",
@@ -994,6 +998,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "295ef3a3bd760d5679766d7d56a25ef6",
     "url": "/riis-helper/static/media/enemy_61.295ef3a3.jpg"
+  },
+  {
+    "revision": "211c3b0fb18ab5fd46a742ea469cee8e",
+    "url": "/riis-helper/static/media/helmet.211c3b0f.jpg"
   },
   {
     "revision": "3b5a1f83898e6617fbc9599507927d10",
@@ -1510,6 +1518,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e4affc7aaa25e34410b1bcf9b40a74f9",
     "url": "/riis-helper/static/media/location_60.e4affc7a.jpg"
+  },
+  {
+    "revision": "bd8bd8485aa9041154fc529aa8b7ee0f",
+    "url": "/riis-helper/static/media/pistol.bd8bd848.jpg"
   },
   {
     "revision": "72497415ca1184dbf3945251b8f55d0c",

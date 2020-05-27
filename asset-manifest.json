@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/riis-helper/static/css/main.2fe6179a.chunk.css",
-    "main.js": "/riis-helper/static/js/main.cb042498.chunk.js",
-    "main.js.map": "/riis-helper/static/js/main.cb042498.chunk.js.map",
+    "main.js": "/riis-helper/static/js/main.023d727e.chunk.js",
+    "main.js.map": "/riis-helper/static/js/main.023d727e.chunk.js.map",
     "runtime-main.js": "/riis-helper/static/js/runtime-main.961484b3.js",
     "runtime-main.js.map": "/riis-helper/static/js/runtime-main.961484b3.js.map",
-    "static/js/2.d164cb7c.chunk.js": "/riis-helper/static/js/2.d164cb7c.chunk.js",
-    "static/js/2.d164cb7c.chunk.js.map": "/riis-helper/static/js/2.d164cb7c.chunk.js.map",
+    "static/js/2.29af7f4c.chunk.js": "/riis-helper/static/js/2.29af7f4c.chunk.js",
+    "static/js/2.29af7f4c.chunk.js.map": "/riis-helper/static/js/2.29af7f4c.chunk.js.map",
     "index.html": "/riis-helper/index.html",
-    "precache-manifest.6b86c99a46b4c16aee0c19927610d558.js": "/riis-helper/precache-manifest.6b86c99a46b4c16aee0c19927610d558.js",
+    "precache-manifest.89c115a23f7472238ecc647ff2e3ce6c.js": "/riis-helper/precache-manifest.89c115a23f7472238ecc647ff2e3ce6c.js",
     "service-worker.js": "/riis-helper/service-worker.js",
     "static/css/main.2fe6179a.chunk.css.map": "/riis-helper/static/css/main.2fe6179a.chunk.css.map",
-    "static/js/2.d164cb7c.chunk.js.LICENSE.txt": "/riis-helper/static/js/2.d164cb7c.chunk.js.LICENSE.txt",
+    "static/js/2.29af7f4c.chunk.js.LICENSE.txt": "/riis-helper/static/js/2.29af7f4c.chunk.js.LICENSE.txt",
     "static/media/Armourjpg_001.jpg": "/riis-helper/static/media/Armourjpg_001.f7c3a2a7.jpg",
     "static/media/Armourjpg_002.jpg": "/riis-helper/static/media/Armourjpg_002.5609bf5a.jpg",
     "static/media/Armourjpg_003.jpg": "/riis-helper/static/media/Armourjpg_003.9bd0634e.jpg",
@@ -132,6 +132,7 @@
     "static/media/Armourjpg_118.jpg": "/riis-helper/static/media/Armourjpg_118.0cbe7b56.jpg",
     "static/media/Armourjpg_119.jpg": "/riis-helper/static/media/Armourjpg_119.0cbe7b56.jpg",
     "static/media/Armourjpg_120.jpg": "/riis-helper/static/media/Armourjpg_120.0cbe7b56.jpg",
+    "static/media/body_armour.jpg": "/riis-helper/static/media/body_armour.bd248963.jpg",
     "static/media/card-draw.svg": "/riis-helper/static/media/card-draw.b2706e46.svg",
     "static/media/costofwar_01.jpg": "/riis-helper/static/media/costofwar_01.667067b8.jpg",
     "static/media/costofwar_02.jpg": "/riis-helper/static/media/costofwar_02.e1cdd810.jpg",
@@ -255,6 +256,7 @@
     "static/media/enemy_59.jpg": "/riis-helper/static/media/enemy_59.f369312b.jpg",
     "static/media/enemy_60.jpg": "/riis-helper/static/media/enemy_60.f9eda7a3.jpg",
     "static/media/enemy_61.jpg": "/riis-helper/static/media/enemy_61.295ef3a3.jpg",
+    "static/media/helmet.jpg": "/riis-helper/static/media/helmet.211c3b0f.jpg",
     "static/media/item_01.jpg": "/riis-helper/static/media/item_01.3b5a1f83.jpg",
     "static/media/item_02.jpg": "/riis-helper/static/media/item_02.3130432d.jpg",
     "static/media/item_03.jpg": "/riis-helper/static/media/item_03.3fc9424f.jpg",
@@ -384,6 +386,7 @@
     "static/media/location_58.jpg": "/riis-helper/static/media/location_58.27d60143.jpg",
     "static/media/location_59.jpg": "/riis-helper/static/media/location_59.e4affc7a.jpg",
     "static/media/location_60.jpg": "/riis-helper/static/media/location_60.e4affc7a.jpg",
+    "static/media/pistol.jpg": "/riis-helper/static/media/pistol.bd8bd848.jpg",
     "static/media/weapon_01.jpg": "/riis-helper/static/media/weapon_01.72497415.jpg",
     "static/media/weapon_02.jpg": "/riis-helper/static/media/weapon_02.c785d547.jpg",
     "static/media/weapon_03.jpg": "/riis-helper/static/media/weapon_03.2fb96fa5.jpg",
@@ -447,8 +450,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.961484b3.js",
-    "static/js/2.d164cb7c.chunk.js",
+    "static/js/2.29af7f4c.chunk.js",
     "static/css/main.2fe6179a.chunk.css",
-    "static/js/main.cb042498.chunk.js"
+    "static/js/main.023d727e.chunk.js"
   ]
 }
