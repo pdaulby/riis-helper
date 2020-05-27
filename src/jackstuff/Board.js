@@ -4,7 +4,7 @@ import Deck from './Deck';
 import DropdownWrapper from "react-dropdown-wrapper";
 
 function Board(props) {
-  let [hand, setHand] = useState([]);
+  let [hand, setHand] = useState(["./Starting/body_armour.jpg", "./Starting/helmet.jpg", "./Starting/pistol.jpg"]);
   let addToHand = (item) => item && setHand(hand.concat(item));
   let removeFromHand = (value) => setHand(hand.filter(item => item !== value));
 
@@ -29,11 +29,11 @@ function Board(props) {
         decks
         <div className="rows decks border">
           <Library deck={enemyDeck} discard={true} addToBoard={addToBoard} refresh={refresh}/>
-          <Library deck={costOfWarDeck} addToBoard={addToBoard} refresh={refresh}/>
-          <Library deck={armourDeck} addToBoard={addToBoard} refresh={refresh}/>
-          <Library deck={itemDeck} addToBoard={addToBoard} refresh={refresh}/>
-          <Library deck={locationDeck} addToBoard={addToBoard} refresh={refresh}/>
-          <Library deck={weaponDeck} addToBoard={addToBoard} refresh={refresh}/>
+          <Library deck={costOfWarDeck} addToBoard={addToBoard} />
+          <Library deck={armourDeck} addToBoard={addToBoard} />
+          <Library deck={itemDeck} addToBoard={addToBoard} />
+          <Library deck={locationDeck} addToBoard={addToBoard} />
+          <Library deck={weaponDeck} addToBoard={addToBoard}/>
           <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100) + 1)} >Roll D100</button> <p />{randomNumber}</div>
         </div>
         board
