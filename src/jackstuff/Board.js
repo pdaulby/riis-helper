@@ -34,7 +34,12 @@ function Board(props) {
           <Library deck={itemDeck} addToBoard={addToBoard} />
           <Library deck={locationDeck} addToBoard={addToBoard} />
           <Library deck={weaponDeck} addToBoard={addToBoard}/>
-          <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100) + 1)} >Roll D100</button> <p />{randomNumber}</div>
+          <div><button onClick={() => setRandomNumber(Math.floor(Math.random() * 100) + 1)} >Roll D100</button> 
+            <p />{randomNumber}
+            <p />------------<p />Shields
+            <p /><input type="checkbox" />
+            <p /><input type="checkbox" />
+          </div>
         </div>
         board
         <div className="rows board border">
